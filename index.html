@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iCND Secure Wallet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <p class="badge">iCND APP</p>
+        <h1>Secure CND Wallet Dashboard</h1>
+        <p class="subtitle">Track your holdings and estimate their current value.</p>
+      </header>
+
+      <section class="card">
+        <h2>Portfolio Estimator</h2>
+        <form id="portfolio-form" class="form-grid">
+          <label>
+            CND Coin Amount
+            <input id="coin-amount" type="number" min="0" step="0.01" placeholder="e.g. 2500" required />
+          </label>
+
+          <label>
+            USD Price per Coin
+            <input id="coin-price" type="number" min="0" step="0.0001" placeholder="e.g. 0.0375" required />
+          </label>
+
+          <button type="submit">Calculate Value</button>
+        </form>
+
+        <div id="result" class="result" aria-live="polite">
+          Enter your amount and price to see estimated value.
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
